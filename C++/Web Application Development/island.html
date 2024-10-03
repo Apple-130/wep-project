@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyang OO Phi Island</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    header {
+      margin: 0;
+      padding: 0;
+      background-image: url("images-island/header-bg.webp");
+      width: 100%;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 10px;
+      background-attachment: fixed;
+    }
+    @media (max-width: 768px) {
+      .header {
+        height: 30vh; /* Adjust height for smaller screens */
+      }
+    }
+    .wel {
+      text-align: center;
+      padding-top: 80px;
+      color: rgb(190, 28, 36);
+      font-family: "Tangerine", cursive;
+      font-weight: bolder;
+      font-size: 50px;
+      font-style: normal;
+    }
+    .title {
+      text-align: center;
+      font-family: "Protest Guerrilla", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: rgb(16, 5, 75);
+      padding-top: 0;
+    }
+    aside {
+      width: 35%;
+      height: 500px;
+
+      float: left;
+    }
+    aside h1 {
+      border: 1px solid rgb(32, 133, 216);
+      display: inline-block;
+      background: linear-gradient(#0a14a7, #a0c1d6, #fcf3cf, white);
+      padding: 10px;
+      color: rgb(221, 13, 30);
+      border-radius: 0 15px 15px 0;
+      font-family: "Sevillana", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    aside p {
+      float: left;
+      text-indent: 15px;
+      font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 8px;
+    }
+    section {
+      width: 63%;
+      height: 500px;
+
+      display: flex;
+      padding: 30px 5px 0 5px;
+    }
+    img {
+      float: right;
+      display: flex;
+      padding: 10px;
+      margin-left: 5px;
+      padding-left: 5px;
+      padding-top: 20px;
+    }
+    #google_translate_element {
+      z-index: 1;
+      position: absolute;
+    }
+    aside {
+      width: 35%;
+      height: 500px;
+
+      float: left;
+    }
+    .resort h1 {
+      border: 1px solid rgb(32, 133, 216);
+      display: inline-block;
+      background-color: rgb(50, 147, 226);
+      padding: 10px;
+      color: rgb(221, 13, 30);
+      border-radius: 0 15px 15px 0;
+      font-family: "Sevillana", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .resort p {
+      float: left;
+      text-indent: 15px;
+      font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 8px;
+    }
+    .resort-image {
+      width: 63%;
+      height: 700px;
+      padding: 30px 5px 0 5px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+    img {
+      float: right;
+      display: flex;
+      padding: 10px;
+      margin-left: 5px;
+      padding-left: 5px;
+      padding-top: 20px;
+    }
+    .food h1 {
+      border: 1px solid rgb(32, 133, 216);
+      display: inline-block;
+      background-color: rgb(50, 147, 226);
+      padding: 10px;
+      color: rgb(221, 13, 30);
+      border-radius: 0 15px 15px 0;
+      font-family: "Sevillana", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .food p {
+      float: left;
+
+      font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 8px;
+    }
+    .food-image {
+      width: 63%;
+      height: 500px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 30px 5px 0 5px;
+    }
+    img {
+      float: right;
+      display: flex;
+      padding: 10px;
+      margin-left: 5px;
+      padding-left: 5px;
+      padding-top: 20px;
+    }
+    .section-1 {
+      background-color: #d6eaf8;
+    }
+    .section-2 {
+      background-color: #f9e79f;
+    }
+    .section-3 {
+      background-color: #aeb6bf;
+      height: 700px;
+    }
+    .section-4 {
+      background-color: #d6eaf8;
+      height: 700px;
+    }
+    .coral h1 {
+      border: 1px solid rgb(32, 133, 216);
+      display: inline-block;
+      background-color: rgb(50, 147, 226);
+      padding: 10px;
+      color: rgb(221, 13, 30);
+      border-radius: 0 15px 15px 0;
+      font-family: "Sevillana", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .coral p {
+      float: left;
+
+      font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 8px;
+    }
+    .coral-image {
+      width: 63%;
+      height: 500px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 30px 5px 0 5px;
+    }
+  </style>
+  <body>
+    <header>
+      <!-- <div id="google_translate_element"></div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: "en",
+              includedLanguages: "en,my",
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+            },
+            "google_translate_element"
+          );
+        }
+      </script>
+      <script
+        type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&hl=en"
+      ></script> -->
+      <div id="google_translate_element"></div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: "en", // Set the default language to English
+              includedLanguages: "en,my", // Include English and Myanmar languages
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            },
+            "google_translate_element"
+          );
+        }
+      </script>
+      <script
+        type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      ></script>
+      <!--Header-->
+      <h1 class="wel">Welcome to</h1>
+      <h1 class="title">Nyaung Oo Phee Island</h1>
+    </header>
+    <!--Location (content)-->
+    <div class="section-1">
+      <aside>
+        <h1>Location</h1>
+        <p>
+          Nyaung Oo Pee Island is the one of 804 excellent Islands of Mergui
+          Archipelago, in Tanintharyi Region, southern Myanmar. Nyaung Oo Phee
+          island is situated in the Andaman Sea.It is one of the newest virgin
+          islands of the world. The Island is secured by the virgin safari, and
+          around of the Island is encompassed by the specific virgin white sandy
+          shoreline (Real white and filled). Next from the shoreline into the
+          ocean, move toward a field of the Coral. Coral reef is another whole
+          world to explore under the water. A single place to see various kinds
+          of beautiful colorful corals is a wonder you will remember for life.
+        </p>
+      </aside>
+      <!--Location (Images)-->
+      <section>
+        <img
+          src="/C++/Web Application Development/images-island/island-3.jpg"
+          alt="image"
+          width="250px"
+          height="300px"
+        />
+
+        <img
+          src="/C++/Web Application Development/images-island/lo-10.jpg"
+          alt="image"
+          width="250px"
+          height="300px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/lo-3.jpg"
+          alt="image"
+          width="250px"
+          height="300px"
+        />
+      </section>
+    </div>
+    <!--The place to stay-->
+    <div class="section-2">
+      <aside class="resort">
+        <h1>Hotels & Resorts</h1>
+        <h3>Victoria Cliff Hotel & Resort</h3>
+        <p>
+          Victoria Cliff Resort (Nyaung Oo Phee Island) A Unique opportunity to
+          discover our “One Island One Resort” concept built on an unexplored
+          island in the Andaman Sea of Southern Myanmar. A brilliant idea to go
+          camping with your friends and families in a natural way, with the
+          benefits of urban comfort in this private island, to discover a vast
+          array of wildlife and untouched beauty of colourful coral reefs by
+          snorkeling, kayaking, hiking and diving.Victoria Cliff Hotel
+          (KawThaung) is established on the rock bank of a prime area in
+          Kawthaung, Tanintharyi Division, in Myanmar, with uninterrupted
+          Panorama View of the tranquil Andaman Sea that will drift you dreamily
+          away.
+        </p>
+      </aside>
+      <!--Resort images-->
+      <section class="resort-image">
+        <img
+          src="/C++/Web Application Development/images-island/lo-2.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+
+        <img
+          src="/C++/Web Application Development/images-island/lo-4.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/lo-6.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/lo-9.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/lo-12.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/lo-13.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+      </section>
+    </div>
+
+    <!--Local Food-->
+    <div class="section-3">
+      <aside class="food">
+        <h1>Restaurants & Local Food</h1>
+
+        <p>
+          <strong>Local Cuisine:</strong> The island offers a selection of local
+          Myanmar dishes that are rich in flavors. You’ll find a lot of fresh
+          seafood, given the island's coastal location. Common dishes include
+          grilled fish, prawn curries, and various seafood salads. The food is
+          often simple but fresh and delicious, showcasing the natural
+          ingredients from the surrounding sea.
+        </p>
+        <p>
+          <strong>Dining Options:</strong> Most dining options are associated
+          with the resorts on the island. For example, the main resort on the
+          island offers a variety of dishes, including vegetarian and vegan
+          options, although these might be limited. The dining experience is
+          often accompanied by beautiful beach views, making it a memorable
+          experience for visitors
+        </p>
+        <p>
+          <strong> Cultural Experience:</strong> Eating on Nyaung Oo Phee Island
+          is not just about the food, but also about experiencing the
+          hospitality of the local Myanmar people, who are known for their
+          friendliness and warm smiles.
+        </p>
+      </aside>
+      <!--Food images-->
+      <section class="food-image">
+        <img
+          src="/C++/Web Application Development/images-island/food-2.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/food-3.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/food-6.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/food-7.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/food-5.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/food-1.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+      </section>
+    </div>
+    <!--Coral reef-->
+    <div class="section-4">
+      <aside class="coral">
+        <h1>Coral Reefs & Snorkeling</h1>
+
+        <p>
+          <strong>The Coral Reefs:</strong> TThe coral reefs around Nyaung Oo
+          Phee Island are some of the most diverse and well-preserved in the
+          region. These underwater ecosystems are teeming with life, showcasing
+          a kaleidoscope of colors that range from the soft pastels of delicate
+          coral branches to the vivid hues of various marine species. The reefs
+          are home to a rich variety of corals, including hard corals like brain
+          corals and staghorn corals, as well as soft corals that sway gently
+          with the ocean currents.
+        </p>
+        <p>
+          <strong>Snorkeling Experience:</strong> Snorkeling at Nyaung Oo Phee
+          Island is a must-do activity for visitors, offering an easy and
+          accessible way to explore the island’s underwater wonders. The
+          island’s shallow waters are perfect for both beginners and experienced
+          snorkelers. With visibility often extending up to 30 meters,
+          snorkelers can easily observe the vibrant coral formations and the
+          diverse marine life that inhabits them.
+        </p>
+      </aside>
+      <!--Coral reefs images-->
+      <section class="food-image">
+        <img
+          src="/C++/Web Application Development/images-island/co-1.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/co-2.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/co-3.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/co-4.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/co-5.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+        <img
+          src="/C++/Web Application Development/images-island/co-6.jpg"
+          alt="image"
+          width="270px"
+          height="250px"
+        />
+      </section>
+    </div>
+  </body>
+</html>

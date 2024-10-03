@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-4</title>
+    <link rel="icon" type="image.png" href="/Hello world/C (1).png.png">
+</head>
+<style>
+    /*Table outside border*/
+    table {
+        width: 80%;
+        border-collapse: collapse;
+       margin: 0 200px 0 100px;
+
+    }
+    /*Table inside border*/
+    th, td {
+     
+      border: 4px dashed rgb(161, 9, 9);
+      border-spacing: none;
+      padding: 20px;
+      font-family: fantasy;
+      font-size: 20px;
+    }
+   
+    td {
+        text-align: center;
+    }
+   
+    caption {
+        color: rgb(158, 12, 12);
+        font-weight: bold;
+        font-size: 20px;
+        margin: 50px 0 50px 0;
+    }
+  
+   
+</style>
+<body>
+   
+    <table>
+        <caption>A test table with merge cells</caption>
+        <tr>                                    <!--Table row-1-->
+            <th rowspan="2"></th>
+            <th colspan="2">Average</th>
+            <th rowspan="2">Red eyes</th>
+
+        </tr>
+        <tr>                                    <!--Table row-2-->
+            <th>height</th>
+            <th>weight</th>
+        </tr>
+        <tr>                                     <!--Table row-3-->
+            <th>Males</th>
+            <td>1.9</td>
+            <td>0.003</td>
+            <td>40%</td>
+        </tr>
+        <tr>                                    <!--Table row-4-->
+            <th>Females</th>
+            <td>1.7</td>
+            <td>0.002</td>
+            <td>43%</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

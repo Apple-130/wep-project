@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blurred Background Image</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .blur-bg {
+        /* Set the height of the container */
+        height: 100vh;
+        /* Add a background image */
+        background-image: url("images-island/header-bg.webp");
+        /* Set background size and position */
+        background-size: cover;
+        background-position: center;
+        /* Apply the blur filter */
+        filter: blur(8px);
+      }
+
+      .content {
+        /* Set your content style */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blur-bg"></div>
+    <div class="content">
+      <p>This is your content</p>
+    </div>
+  </body>
+</html>

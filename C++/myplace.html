@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show More with Images</title>
+  <style>
+    .more-content {
+      display: none; /* Hide the extra content and images initially */
+    }
+
+    #showMoreBtn {
+      background-color: #007BFF; /* Button background color */
+      color: white; /* Button text color */
+      border: none; /* Remove border */
+      padding: 10px 20px; /* Button padding */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-top: 10px; /* Space above the button */
+      border-radius: 5px; /* Rounded corners */
+    }
+
+    #showMoreBtn:hover {
+      background-color: #0056b3; /* Darken the button on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p>This is some content that is always visible.</p>
+
+    <!-- Hidden content and images -->
+    <div class="more-content" id="moreContent">
+      <p>This is additional content that is hidden by default and will be shown when the button is clicked.</p>
+      <p>Here is an image:</p>
+      <img src="path-to-your-image.jpg" alt="Description of image" style="width:100%;max-width:400px;">
+      <p>Another piece of content or image.</p>
+      <img src="path-to-another-image.jpg" alt="Description of another image" style="width:100%;max-width:400px;">
+    </div>
+
+    <!-- Show More button -->
+    <button id="showMoreBtn" onclick="toggleContent()">Show More</button>
+  </div>
+
+  <script>
+    function toggleContent() {
+      var content = document.getElementById("moreContent");
+      var btn = document.getElementById("showMoreBtn");
+
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block"; // Show the content and images
+        btn.textContent = "Show Less"; // Change button text
+      } else {
+        content.style.display = "none"; // Hide the content and images
+        btn.textContent = "Show More"; // Change button text
+      }
+    }
+  </script>
+</body>
+</html>

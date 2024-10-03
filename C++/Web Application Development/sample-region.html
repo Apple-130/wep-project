@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Page</title>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Sevillana&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      href="/C++/Web Application Development/pj-logo.jpg"
+      type="image.jpg"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    header {
+     position: relative;
+      width: 100%;
+      height: auto;
+
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("chat-2.webp");
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px); /* Apply blur to background */
+      z-index: -1; /* Make sure it's behind content */
+    }
+  
+    .logo {
+      border-radius: 50%;
+      margin-top:5px ;
+      margin-left: 30px;
+    }
+   
+    ul {
+      list-style-type: none;
+
+      margin-left: 300px;
+    }
+    li {
+      display: inline-block;
+      list-style-type: none;
+      background-color: #161D6f;
+    color: #fff;
+      padding: 5px 15px 5px 15px;
+      border-radius: 50px;
+      margin-top: 10px;
+      margin-right: 30px;
+      font-weight: bold;
+      
+    }
+    .nav-link {
+      color: whitesmoke;
+    }
+    
+   
+
+    .search-container {
+      position: absolute;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 50px;
+      padding: 5px;
+      margin: 10px;
+      padding: 0;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      padding: 5px;
+      width: 150px;
+      font-size: 16px;
+      border-radius: 25px;
+    }
+
+    .search-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 10px;
+      margin: 0;
+    }
+
+    .search-icon {
+      font-size: 20px;
+      color: #555;
+    }
+
+    .search-btn:hover .search-icon {
+      color: #007bff;
+    }
+    li:hover {
+      background-color: whitesmoke;
+      color: black;
+    }
+    
+    
+    .dropdown-item:hover {
+      color: rgb(36, 15, 226);
+
+    }
+
+    pre {
+      color:whitesmoke;
+      font-size: 35px;
+     margin-top: 70px;
+     margin-left: 0;
+     padding-left: 0;
+     font-family: "Jacques Francois Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+    }
+
+
+ @media (max-width: 768px) {
+      pre {
+        font-size: 25px;
+        text-align: center;
+      }
+      ul {
+        margin-left: 50px;
+      }
+    }
+  
+   
+
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}*/
+
+.slider-container {
+            width: 80%;
+            position: relative;
+            overflow: hidden;
+            perspective: 1000px; /* Adds 3D perspective */
+            margin: 5vw 0 5vw 5vw;
+        }
+
+        .card-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card {
+            min-width: 200px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            transform-style: preserve-3d; /* Enables 3D effects */
+        }
+
+        .card:hover {
+            transform: rotateY(20deg) scale(1.1); /* Rotate and scale on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Buttons */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-btn:hover {
+            background-color: white;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+
+   
+
+   
+  </style>
+  <body>
+    <header>
+      
+      <!--Navigation Bar-->
+      <!--Logo-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <img src="/C++/Web Application Development/pj-logo.jpg" class="logo" alt="Destino" width="100px" height="100px">
+      
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!--Home-->
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
+              </li>
+              <!--Where to go
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Where to go
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Yangon Region</a>
+                  <a class="dropdown-item" href="#">Mandalay Region</a>
+                  <a class="dropdown-item" href="#">Saging Region</a>
+                  <a class="dropdown-item" href="#">Bago Region</a>
+                  <a class="dropdown-item" href="#">Ayeyarwady</a>
+                  <a class="dropdown-item" href="/C++/Web Application Development/images-island/Tanintharyi.html">Tanintharyi Region</a>
+                  <a class="dropdown-item" href="#">Magway Region</a>
+                  <a class="dropdown-item" href="#">Kachin State</a>
+                  <a class="dropdown-item" href="#">Kayin State</a>
+                  <a class="dropdown-item" href="#">Kayar State</a>
+                  <a class="dropdown-item" href="#">Chin State</a>
+                  <a class="dropdown-item" href="#">Mon State</a>
+                  <a class="dropdown-item" href="#">Shan State</a>
+                  <a class="dropdown-item" href="#">Rakhine State</a>
+                 
+                 </ul>-->
+                 <!-- Dropdown Menu -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Where to go
+  </a>
+  <ul class="dropdown-menu">
+    <!-- Initially visible items -->
+    <a class="dropdown-item" href="#">Yangon Region</a>
+    <a class="dropdown-item" href="#">Mandalay Region</a>
+    <a class="dropdown-item" href="#">Sagaing Region</a>
+    <a class="dropdown-item" href="#">Bago Region</a>
+    <a class="dropdown-item" href="#">Ayeyarwady</a>
+
+    <!-- Initially hidden items -->
+    <div id="moreRegions" style="display: none;">
+      <a class="dropdown-item" href="/C++/Web Application Development/images-island/Tanintharyi.html">Tanintharyi Region</a>
+      <a class="dropdown-item" href="#">Magway Region</a>
+      <a class="dropdown-item" href="#">Kachin State</a>
+      <a class="dropdown-item" href="#">Kayin State</a>
+      <a class="dropdown-item" href="#">Kayar State</a>
+      <a class="dropdown-item" href="#">Chin State</a>
+      <a class="dropdown-item" href="#">Mon State</a>
+      <a class="dropdown-item" href="#">Shan State</a>
+      <a class="dropdown-item" href="#">Rakhine State</a>
+    </div>
+
+    <!-- Show More button -->
+    <button type="button" class="dropdown-item text-primary" id="showMoreBtn" onclick="showMore()">Show More...</button>
+  </ul>
+</li>
+
+<script>
+  function showMore() {
+    const moreRegions = document.getElementById('moreRegions');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+
+    // Toggle the visibility of the hidden regions
+    if (moreRegions.style.display === 'none') {
+      moreRegions.style.display = 'block';  // Show the hidden regions
+      showMoreBtn.textContent = 'Show Less...';  // Change button text
+    } else {
+      moreRegions.style.display = 'none';  // Hide the regions again
+      showMoreBtn.textContent = 'Show More...';  // Reset button text
+    }
+  }
+</script>
+
+
+              <!--Events & Festival-->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Events & Festival</a>
+              </li>
+              <!--About Us-->
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <!--Search box-->
+              <form class="d-flex">
+                <div class="search-container">
+                  <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
+                  <input 
+                    type="text"
+                    placeholder="Search..."
+                    class="search-input"
+                  />
+                  <button class="search-btn" type="submit">
+                  </button>
+                </div>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Home page texts-->
+      <pre>
+        WELCOME TO  DESTINO 
+           TRAVEL OVER                 
+              AROUND BURMA      
+              
+      </pre>
+    </header>
+    <section>
+        <div class="slider-container">
+            <div class="card-wrapper" id="card-wrapper">
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-3.jpg" alt="Card 1">
+                    <h4>Card 1</h4>
+                </div>
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-5.jpg" alt="Card 2">
+                    <h4>Card 2</h4>
+                </div>
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-7.jpg" alt="Card 3">
+                    <h4>Card 3</h4>
+                </div>
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-2.jpg" alt="Card 4">
+                    <h4>Card 4</h4>
+                </div>
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-1.jpg" alt="Card 5">
+                    <h4>Card 5</h4>
+                </div>
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-5.jpg" alt="Card 6">
+                    <h4>Card 6</h4>
+                </div>
+                <div class="card">
+                    <img src="/C++/Web Application Development/img-6.jpg" alt="Card 7">
+                    <h4>Card 7</h4>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <button class="nav-btn prev" id="prev">⟨</button>
+            <button class="nav-btn next" id="next">⟩</button>
+        </div>
+        
+        <script>
+            const cardWrapper = document.getElementById('card-wrapper');
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+        
+            let currentIndex = 0;
+            const totalCards = document.querySelectorAll('.card').length;
+            const visibleCards = 5;
+            const cardWidth = document.querySelector('.card').offsetWidth + 20; // 200px + 10px margin on each side
+        
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < totalCards - visibleCards) {
+                    currentIndex++;
+                    cardWrapper.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+                }
+            });
+        
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    cardWrapper.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+                }
+            });
+        </script>
+    </section>
+  
+  </body>
+</html>
